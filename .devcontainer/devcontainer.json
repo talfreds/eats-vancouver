@@ -1,0 +1,32 @@
+{
+  "name": "Flutter Web – Eats Vancouver",
+  "image": "ghcr.io/cirruslabs/flutter:stable",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true
+    }
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Flutter Web",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "flutter pub get",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.dart-code",
+        "Dart-Code.flutter"
+      ],
+      "settings": {
+        "dart.flutterSdkPath": "/opt/flutter",
+        "editor.formatOnSave": true,
+        "editor.rulers": [80]
+      }
+    }
+  }
+}

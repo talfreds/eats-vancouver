@@ -1,0 +1,46 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.g.dart
+*.freezed.dart
+
+# iOS/macOS
+ios/
+macos/
+*.xcworkspace
+*.xcodeproj
+Pods/
+
+# Android
+android/
+.gradle/
+local.properties
+*.keystore
+*.jks
+
+# Web build output
+web/build/
+
+# Linux/Windows
+linux/
+windows/
+
+# Test coverage
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+secrets.dart

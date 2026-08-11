@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder element to allow easily changing the base href in tests.
+    The "SEARCH" string is replaced with a script tag in tests.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Discover new restaurants, happy hours &amp; social deals in Vancouver, BC.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Eats Vancouver">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Eats Vancouver</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+    }
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #FFF8F0;
+      font-family: 'Nunito', sans-serif;
+    }
+    #loading .emoji {
+      font-size: 56px;
+      animation: bounce 0.8s infinite alternate;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0px); }
+      to   { transform: translateY(-14px); }
+    }
+    #loading p {
+      margin-top: 16px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #2D2D2D;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="emoji">🍜</div>
+    <p>Eats Vancouver</p>
+  </div>
+
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var loading = document.getElementById('loading');
+      if (loading) {
+        loading.style.opacity = '0';
+        loading.style.transition = 'opacity 0.4s ease';
+        setTimeout(function() { loading.remove(); }, 400);
+      }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
